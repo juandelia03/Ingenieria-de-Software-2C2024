@@ -1,13 +1,13 @@
-!classDefinition: #I category: 'Ejercicio 4.3'!
+!classDefinition: #I category: 'Ejercicio 4.2'!
 DenotativeObject subclass: #I
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'Ejercicio 4.3'!
+	category: 'Ejercicio 4.2'!
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'I class' category: 'Ejercicio 4.3'!
+!classDefinition: 'I class' category: 'Ejercicio 4.2'!
 I class
 	instanceVariableNames: ''!
 
@@ -49,16 +49,16 @@ restarleA:unNumero
 	^unNumero previous.! !
 
 
-!classDefinition: #II category: 'Ejercicio 4.3'!
+!classDefinition: #II category: 'Ejercicio 4.2'!
 DenotativeObject subclass: #II
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'Ejercicio 4.3'!
+	category: 'Ejercicio 4.2'!
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'II class' category: 'Ejercicio 4.3'!
+!classDefinition: 'II class' category: 'Ejercicio 4.2'!
 II class
 	instanceVariableNames: 'next previous'!
 
@@ -87,7 +87,7 @@ II class
 	self = dividend ifTrue:[^I].
 	^I + ((self - dividend)/dividend)! !
 
-!II class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:43:09'!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:28:44'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
@@ -99,18 +99,10 @@ menorA: unNumero
 	unNumero = I ifTrue: [^false].
 	^self previous menorA: (unNumero previous)! !
 
-!II class methodsFor: '-- all --' stamp: 'jd 8/24/2024 20:32:14'!
-nameOfNext
-	(self name endsWith: 'VIII') ifTrue:[^(self name withoutSuffix: 'VIII'), 'IX'].
-	(self name endsWith: 'III') ifTrue:[^(self name withoutSuffix: 'III'), 'IV'].
-	(self name endsWith: 'IV') ifTrue:[^(self name withoutSuffix: 'IV'), 'V'].
-	(self name endsWith: 'IX') ifTrue:[^(self name withoutSuffix: 'IX'), 'X'].
-	^self name,'I'! !
-
-!II class methodsFor: '-- all --' stamp: 'jd 8/24/2024 20:32:33'!
+!II class methodsFor: '-- all --' stamp: 'jd 8/23/2024 21:04:32'!
 next
 	next ifNotNil: [^next].
-	next := II createChildNamed: self nameOfNext.
+	next := II createChildNamed: self name,'I'.
 	next previous: self.
 	^ (self next)! !
 
@@ -129,7 +121,7 @@ restarleA:unNumero
 ! !
 
 
-!II class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:43:09'!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:28:44'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
@@ -137,25 +129,91 @@ initializeCollaboratorsFromFile
 	previous := I.! !
 
 
-!classDefinition: #III category: 'Ejercicio 4.3'!
+!classDefinition: #III category: 'Ejercicio 4.2'!
 II subclass: #III
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
-	category: 'Ejercicio 4.3'!
+	category: 'Ejercicio 4.2'!
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'III class' category: 'Ejercicio 4.3'!
+!classDefinition: 'III class' category: 'Ejercicio 4.2'!
 III class
 	instanceVariableNames: ''!
 
-!III class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:43:09'!
+!III class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:28:44'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIII.
+	previous := II.! !
+
+
+!classDefinition: #IIII category: 'Ejercicio 4.2'!
+II subclass: #IIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 4.2'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'IIII class' category: 'Ejercicio 4.2'!
+IIII class
+	instanceVariableNames: ''!
+
+!IIII class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:28:44'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIIII.
+	previous := III.! !
+
+
+!classDefinition: #IIIII category: 'Ejercicio 4.2'!
+II subclass: #IIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 4.2'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'IIIII class' category: 'Ejercicio 4.2'!
+IIIII class
+	instanceVariableNames: ''!
+
+!IIIII class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:28:44'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	next := IIIIII.
+	previous := IIII.! !
+
+
+!classDefinition: #IIIIII category: 'Ejercicio 4.2'!
+II subclass: #IIIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 4.2'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'IIIIII class' category: 'Ejercicio 4.2'!
+IIIIII class
+	instanceVariableNames: ''!
+
+!IIIIII class methodsFor: '--** private fileout/in **--' stamp: 'jd 8/24/2024 20:28:44'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
 	next := nil.
-	previous := II.! !
+	previous := IIIII.! !
 
 II initializeAfterFileIn!
 III initializeAfterFileIn!
+IIII initializeAfterFileIn!
+IIIII initializeAfterFileIn!
+IIIIII initializeAfterFileIn!
