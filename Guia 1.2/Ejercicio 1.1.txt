@@ -1,0 +1,17 @@
+Ejercicio 1.1
+a)
+NO se puede agregar a la posición 5 porque excede la longitud del arreglo, que es fija.
+b)
+la colección tiene 6 elementos.
+el 2 aparece 2 veces.
+c)
+la coleccion tiene 5 elementos
+el 2 aparece una sola vez, es un conjunto no hay repetidos.
+d)
+x := Dictionary new .
+x add: #a->4; add: #b->3; add: #c->1; add: #d->2;yourself.
+x add:#e->42.
+x keys.
+x values.
+x at: #a.
+(x includesKey: #z) ifTrue: [x at:#z] ifFalse:[24]

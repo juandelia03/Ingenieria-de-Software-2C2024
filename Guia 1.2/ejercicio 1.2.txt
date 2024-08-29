@@ -1,0 +1,15 @@
+1.2
+e)
+x := #(5 4 3 2).
+x asOrderedCollection.
+x  asSet.
+f)
+x := Set with: 4 with: 3 with: 2 with: 1.
+x asArray.
+g)
+Devuelve un array de values:
+x := Dictionary new.
+x add: #a->4; add: #b->3; add: #c->1; add: #d->2; yourself.
+
+x asArray  #(3 4 2 1) . 
+
