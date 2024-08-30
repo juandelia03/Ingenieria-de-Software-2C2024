@@ -1,0 +1,4 @@
+Es lo que conocemos como map en SmallTalk se llama collect
+| elements elementsDoubled | 
+elements:= #(1 2 5 6 9).
+elementsDoubled := elements collect: [:number| number*2]. 

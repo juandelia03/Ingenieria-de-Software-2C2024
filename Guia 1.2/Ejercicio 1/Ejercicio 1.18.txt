@@ -1,0 +1,3 @@
+|string|
+string := 'abcdefguijp'.
+string select: [:caracter| caracter isVowel].

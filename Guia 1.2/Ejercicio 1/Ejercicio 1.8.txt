@@ -1,0 +1,11 @@
+| elements odds |
+elements:= #(12 3 21 5 6 8).
+odds := OrderedCollection new.
+elements do:
+[:numeroActual |
+	numeroActual odd ifTrue: [odds add: numeroActual]. 
+].
+^odds
+
+
+El codigo es mas compacto y legible, evitamos tener variable como index que hacia menos declarativa por ejemplo a la condición del if.

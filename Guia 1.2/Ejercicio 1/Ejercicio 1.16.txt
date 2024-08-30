@@ -1,0 +1,16 @@
+Con do:
+|elements acumulador|
+elements := #(1  3 8 6 5).
+elements  sum.
+acumulador := 0.
+elements do:[:aNumber| acumulador  := acumulador + aNumber ].
+^acumulador 
+
+
+Con inject: into:
+|elements|
+elements := #(1  3 8 6 5).
+elements  inject: 0 into: [:acumulador :aNumber|  aNumber +acumulador ].
+
+
+No encontré el mensaje que era especifico para sumar los altos tipo sum ?

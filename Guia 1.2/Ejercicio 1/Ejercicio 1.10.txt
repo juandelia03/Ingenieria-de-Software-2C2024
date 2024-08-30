@@ -1,0 +1,10 @@
+| elements index elementsDoubled | 
+elements:= #(1 2 5 6 9).
+elementsDoubled := OrderedCollection new. 
+index := 1.
+[index <= elements size] 
+whileTrue: [
+	elementsDoubled add: (elements at: index)*2. 
+	index := index +1.
+].
+^elementsDoubled

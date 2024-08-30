@@ -1,0 +1,14 @@
+i)
+En el workspace no hay problema, devuelve 2.
+Nota: Me resulta raro si el bloque es una ejecución diferida, seria lógico que pierda acceso a sus variables una vez que termino su ejecución
+
+ii)
+También anda.
+A diferencia del caso anterior si me resulta lógico que el bloque pueda acceder a variables fuera de el, como a la hora de hacer un ifTrue si quiero modificar una variable del programa.
+
+(A la hora de crear un método funciona como digo)
+
+Ejemplo bloque con 2 parámetros
+
+[:a :b| a+b] value: 1 value:2
+Devuelve 3

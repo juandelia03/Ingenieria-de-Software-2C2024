@@ -1,0 +1,33 @@
+4.2
+10*peso+ 10*dollar 
+Da error, por el modo de evaluación de SmallTalk trata de hacer, primero 10*peso, que funciona,
+Y queda 10*pesos + 10 * dollar, al momento de hacer 10*pesos+ 10 (que es la siguiente colaboración en orden)
+Queda 10*pesos + 10 y cuando a eso le tratamos de hacer * dollar da error.
+
+4.3
+10 * peso +( 10 * dollar) ->  10 * dollars+10 * pesos (ojo que los da vuelta!)
+
+10*peso+(10*dollar)-(2*dollar) -> 10 * pesos+8 * dollars (ojo que ahora no lo da vuelta!)
+
+Me parece que ordena la suma en orden creciente, primero aparecen las medidas que son nominalmente mas grandes,
+No estoy seguro!
+
+4.4
+Peso es una BaseUnit
+
+4.5
+Amount devuelve el numero sin la unidad.
+Unit devuelve de que unidad es la medida.
+
+4.6
+Un numero amount devuelve al mismo numero.
+En cambio unNumero unit devuelve el objeto NullUnit.
+
+4.7 ¿Cuánto es(10*peso)+1 y 1+ (10*peso) ?
+Ambos son 10 pesos + 1
+
+
+4.9
+|metro centimetro|
+metro := BaseUnit nameForOne: 'metro' nameForMany: 'metros' sign:m.
+centimetro := ProportionalDerivedUnit baseUnit: metro conversionFactor:1/100  nameForOne:'centimetro'  nameForMany:'centimetros' sign: 'cm'.

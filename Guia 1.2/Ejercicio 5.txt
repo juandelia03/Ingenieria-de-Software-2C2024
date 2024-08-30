@@ -1,0 +1,10 @@
+5.3
+Da error
+5.4
+Error
+5.5
+I) Error smallInteger no entiende isLeap 
+II) (April, 2024) year isLeap devuelve True xq (April,2024) year devuelve Year 2024
+5.6
+No se le puede hacer next con un numero, tiene que ser una medida de tiempo
+TimeOfDay now next:3600 * second

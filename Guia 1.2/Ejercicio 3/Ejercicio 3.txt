@@ -1,0 +1,13 @@
+Symbols are objects that represent strings used for names in the system. The literal representation of a symbol is a sequence of alphanumeric characters preceded by a pound sign.
+There will never be two symbols with the same characters; each symbol
+is unique. This makes it possible to compare symbols efficiently. 
+
+|x y|
+x := #pepe
+y := #pepe 
+x=y.
+
+Devuelve true
+
+Concatenar Símbolos devuelve un string con las letras de los signos concatenadas. Por ejemplo:
+#Hello , #World, #! Devuelve: 'HelloWorld!' 

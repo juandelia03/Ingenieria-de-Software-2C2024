@@ -1,0 +1,16 @@
+No hago mas whiles!
+
+Con do:
+
+|elements|
+elements := #(1 2 3 4 5).
+elements do:[:aNumber| aNumber even ifTrue:[^aNumber]].
+
+Si no hay pares el script retorna #(1 2 3 4 5) porque es el resultado de la ultima colaboración que ejecutó. Si queremos tirar un msj de error hay que agregar:
+
+|elements|
+elements := #(1  3 5).
+elements do:[:aNumber| aNumber even ifTrue:[^aNumber]].
+self error: 'No hay pares'
+
+(self referencia a #(1  3 5))

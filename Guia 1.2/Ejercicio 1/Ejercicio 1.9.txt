@@ -1,0 +1,22 @@
+| elements odds |
+elements:= #(12 3 21 5 6 8).
+odds := OrderedCollection new.
+odds := elements select:
+[:numeroActual |
+	numeroActual odd.
+].
+
+O directamente se podría hacer
+
+| elements|
+elements:= #(12 3 21 5 6 8).
+^elements select:
+[:numeroActual |
+	numeroActual odd.
+].
+
+Select es como un "filter"
+
+Esta version tiene la ventaja de que es mas compacta aun y si se conoce el funcionamiento de select es aun mas legible, es mas parecido al lenguaje natural:
+Odds = elements select [: numeroActual|numeroActuall odd]
+Seria, odds es igual a en elements "seleccionar" cada elemento par
