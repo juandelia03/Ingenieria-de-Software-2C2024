@@ -83,3 +83,19 @@ En este cápitulo el autor describe algunos desarrollos que podrían ser balas d
 - **Ambientes y herramientas**: Estos ya resolvieron dificultades como sistemas de archivos, formatos uniformes, eliminación de errores sintácticos. Todo esto es muy útil pero no ataca ninguna dificultad esencial del software.
 
 - **Estaciones de trabajo**: Aumentar la velocidad de las máquinas donde trabajamos no cambia tanto la productividad del desarrollo (mucho menos hoy que los programas ya compilan rápido), la mayor parte del tiempo se gasta en pensar las soluciones e implementarlas.
+
+## Ataques prometedores sobre la esencia conceptual
+
+En esta sección presenta algunos puntos para aminorar las dificultades esenciales.
+
+- **Buy vs Build**: Comprar software en vez de construirlo puede ser una buena opción. Dado que hay un mercado masivo y una gran necesidad por software, puede resultar más barato y rápido comprar un software que hacerlo, ya que no hay que pagar a desarolladores ni esperar a que lo construyan. Además generalmente cuentan con buena documentación y mantenimiento. La gran desventaja es la flexibilidad: Si necesitamos un caso de uso más específico puede ser dificil modificar software que no es de uno y puede generar problemas de integración.
+
+- **Refinar requerimientos y prototipos rápidos**: Definir que es lo que tiene que hacer un software es una tarea muy compleja, y si se hace mal, costa y difícil de corregir. Ni siquiera el cliente sabe exactamente que quiere. Para este proceso, es muy útil presentar varias iteraciones o prototipos. El propósito del prototipo es testear la consistencia y usabilidad del producto sin necesidad de que este terminado. Este proceso puede evitar hacer un producto que este fundamentalmente mal y tener que revisarlo todo después de entregarlo.
+
+- **Desarrollo incremental-grow,not build,software**: La metáfora de contruir software ya está desactualizada y hay que pensar en hacer crecer (grow) software. Los sistemas tienen que a priori correr, aunque no hagan nada útil y después hacer crecer cada parte. Esto puede aumentar mucho la productividad porque permite hacer un prototipamiento rápido y agregar funcionalidades de manera orgánica construyendo sobre lo que ya está en el sistema. Tener feedback rápido de lo que desarrollamos tiene un muy buen impacto en la moral.
+
+- **Great designers**: Lo central para hacer buen software es la gente. Que los programadores sigan buenas prácticas es necesario para poder proveer buenos diseños. Esto es suficiente para pasar de diseños pobres a buenos pero para tener diseños increibles se necesitan diseñadores increibles. Algunas pautas para potenciar grandes diseñadores son:
+  - Identificarlos lo antes posible, pueden tener poca experiencia pero ser valiosos
+  - Asignarles un mentor
+  - Mantener un plan de desarrollo de carrera para los diseñadores con cursos y educación formal
+  - Otorgar oportunidades a los dieseñadores de interactuar y estimularse entre ellos.
