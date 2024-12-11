@@ -7,7 +7,7 @@ Filosóficamente, el diseño de smalltalk tiene que ver con las nociones de la f
 Su forma de hacer objetos es platónica, en el sentido de que a partir de idear conceptos (ideas) se pueden crear manifestaciones y el sistema se define sobre si mismo.  
 Smalltalk contribuyó para shiftear el paradigma hacia el diseño mediante POO,
 atacando los problemas de los desarrolladores profesionales y haciendo simples los problemas de los novatos. Hizo que sea más fácil modelar sistemas dinámicos complejos.  
-Si bien el diseño smalltalk dice que el sistema pertenece más a Dan Ingalls y Adelle goldberg, los principales responables de hacerlo funcionar. Especialmente a Dan Ingalls que dice que se transformo en además de un gran implementador en un gran diseñador no solo del lenguaje sino de la interfaz gráfica.
+Si bien él diseñó smalltalk, dice que el sistema pertenece más a Dan Ingalls y Adelle goldberg, los principales responables de hacerlo funcionar. Especialmente a Dan Ingalls que dice que se transformo en además de un gran implementador en un gran diseñador no solo del lenguaje sino de la interfaz gráfica.
 
 ## 1960-1966---EARLY OOP AND OTHER FORMATIVE IDEAS OF THE SIXTIES
 
@@ -40,8 +40,8 @@ En un campamento de Inteligencia Artificial de Stanford entendió _LISP_, que si
 ## 1970-1972 XEROX PARC: THE KIDDIKOMP, MINICOM, AND SMALLTALK-71
 
 En 1970 Xerox decidió abrir un centro de investigación en Palo Alto, California. Alan empezó a trabajar en una nueva versión del _KiddiKomp_ que podía llevar al diseño de la interfaz de usuario de la notebook.  
-Mucha de la genten de Doug Englebart's (el que presentó NLS) también se unió con la intención de re-implementar NLS como un sistema distribuido de redes.  
-Cuenta una anécdota en PARC donde Allen Newell (un investigador según Kay más inteligente que el) es retado a resolver el siguiente problema: Dada una lista devolver una lista con todos los elementos de las posiciones pares seguido por todos los de las posiciones pares de la lista original. Allen Newell tardó media hora en resolverlo y dió una solución con bugs, que implementó en un lenguaje con manejo de éxplicito de punteros mientras que Kay lo resolvió en pocos minutos usando Lisp:
+Mucha de la gente de Doug Englebart's (el que presentó NLS) también se unió con la intención de re-implementar NLS como un sistema distribuido de redes.  
+Cuenta una anécdota en PARC donde Allen Newell (un investigador según Kay más inteligente que el) es retado a resolver el siguiente problema: Dada una lista devolver una lista con todos los elementos de las posiciones pares seguido por todos los de las posiciones impares de la lista original. Allen Newell tardó media hora en resolverlo y dió una solución con bugs que implementó en un lenguaje con manejo de éxplicito de punteros, mientras que Kay lo resolvió en pocos minutos usando Lisp:
 
 ```
 oddsEvens (x) = append (odds (x), evens (x))
@@ -56,14 +56,19 @@ En esa misma época los directivos de Xerox estaban preocupados en como iba a se
 Más adelante creó el Learning Research Group (LRG), su primer grupo. Solo contrató gente que se veía interesada en el concepto de la notebook, si alguien le preguntaba que había que hacer señalaba al modelo de la computadora y decía que lo avancen. Los miembros del grupo se volvieron muy unidos. Dan Ingalls atribuyé parte de los avances al amor y energía de todo el grupo, se pasaban varios días fuera de Xerox PARC haciendo cualquier actividad y discutiendo del Dynabook y su potencial para amplificar el alcance de los humanos y traer nuevas formas de pensar.  
 En el verano del 71 refinó la idea de la _KiddiKomp_ a un diseño mas ajustado llamado miniCOM. Tenía un nuevo display, un dispositivo para apuntar (mouse?), una memoria secundaria y un nuevo lenguaje llamado _Smalltalk_ (era Smalltalk-71). Le pareció un nombre tan inocuo/inofensivo que si hiciera cualquier cosa la gente ya estaría más que sorprendida. El lenguaje fue influenciado por _FLEX_, _PLANNER_, _LOGO_, _META II_ y sus derivados.  
 Vuelve a explicar que la belleza de _Lisp_ se vió diluida definiendo partes del lenguaje como "formas especiales" en lugar de estar construido universalmente con funciones. Reflexionó mucho en como caracterizar a los objetos de forma que sean "computadoras universales" sin tener excepciones a la metáfora central. Para esto es necesario tener control en cuando y en que ambiente se evalúan las expresiones.  
-Comenta que Dave Fisher presenta una solución elegante en una tesis. En esta dice que hay que manejar la mecánica de las invocaciones entre modulos sin que nos importen los detalles de los modulos en si mismo. El manejo sería igual para Smalltalk y Lisp, después difieren en como son sus modulos.  
-Alan intenta describir a la belleza de un lenguaje, sobre lo cual reflexiona mucho. Los lenguajes deberían reducirse a lo mínimos y necesario, ser adaptables a distintos contextos, ser elegantes/comprensibles y prácticos (que no pierdan simplicidad a la hora de escribir soluciones).  
+Comenta que Dave Fisher presentó una solución elegante en una tésis. En esta dice que hay que manejar la mecánica de las invocaciones entre modulos sin que nos importen los detalles de los modulos en si mismo. El manejo sería igual para Smalltalk y Lisp, después difieren en como son sus modulos (apreciación mía: creo que esto tiene que ver con late-binding, resuelve todo lo externo a los módulos de la misma manera, evitando preocuparse por las implementaciones espécificas de los mismos).  
+Alan intenta describir a la belleza de un lenguaje, sobre lo cual reflexiona mucho. Los lenguajes deberían reducirse a lo mínimos y necesario:
+
+- ser adaptables a distintos contextos
+- ser elegantes/comprensibles
+- ser prácticos (que no pierdan simplicidad a la hora de escribir soluciones).
+
 Después cuenta que siguió trabajando en las interfaces gráficas haciendo superposición de ventanas. La pantalla era importante para poder introducir la Dynabook a las escuelas con premisa de mostrar textos en buena calidad.  
 Al final de la sección cuenta que presentó un plan para hacer un sistema que involucre OOP, ventanas, música, animaciones y programación icónica. "Simple things should be simple, complex things should be possible.".
 
 ## 1972-76---THE FIRST REAL SMALLTALK (-72), ITS BIRTH, APPLICATIONS,AND IMPROVEMENTS
 
-Cuenta que hizo dos apuestas. Una fue que un colega decía que podía construir una computadora en 3 meses, kay lo ayudó con la pantalla (fonts,resolución,animación, música). Esta computadora terminó siendo la famosa ALTO. La segunda apuesta fue más interesante, discutiendo de lenguajes Alan Kay dijo que un lenguaje muy poderoso podía ser definido en una sola página (ya vió algo similar con Lisp). En unos días con el equipo diseño el primer Smalltalk-72 que luego fue ligeramente modificado. Poco tiempo más tarde Dan Ingalls llevo el lenguaje a la vida en una _NOVA_ usando BASIC.  
+Cuenta que hizo dos apuestas. Una fue que un colega decía que podía construir una computadora en 3 meses, kay lo ayudó con la pantalla (fonts,resolución,animación, música). Esta computadora terminó siendo la famosa ALTO. La segunda apuesta fue más interesante, discutiendo de lenguajes Alan Kay dijo que un lenguaje muy poderoso podía ser definido en una sola página (ya vió algo similar con Lisp). En unos días con el equipo diseñó el primer Smalltalk-72 que luego fue ligeramente modificado. Poco tiempo más tarde Dan Ingalls llevo el lenguaje a la vida en una _NOVA_ usando BASIC.  
 Unos meses después construyeron la primer DynaBook y Dan Ingalls trabajó en hacer que corra smalltalk. Smalltalk se ordenó en 6 ideas:
 
 - Todo es un objeto
@@ -73,7 +78,7 @@ Unos meses después construyeron la primer DynaBook y Dan Ingalls trabajó en ha
 - La clase contiene el comportamiento de sus instancias
 - Para evaluar una lista de programa, se le pasa el control al primer objeto y el resto es tratado como un mensaje (a+b -> reciever:a message:+b).
 
-Esto llevo a un estilo de programación que buscaba comportamiento genérico para los mensajes con símbolos, como que el + no se único para números, sino que 'hola' + ' mundo' evalúe a 'hola mundo'. Esto es un polimorfismo, dependiendo del tipo de quien recive el mensaje cambia el comportamiento. Con esto en mente se podía agregar funcionalidad "intensionally", en lugar de extensiva, como definir en la clase de Integer el factorial en lugar de definir el método en cualquier lado. La idea de OOP es definir todo pensando en el comportamiento y la esencia (intensionalmente).
+Esto llevo a un estilo de programación que buscaba comportamiento genérico para los mensajes con símbolos, como que el + no sea único para números, sino que 'hola' + ' mundo' evalúe a 'hola mundo'. Esto es un polimorfismo, dependiendo del tipo de quien recive el mensaje cambia el comportamiento. Con esto en mente se podía agregar funcionalidad "intensionally", en lugar de extensiva, como definir en la clase de Integer el factorial en lugar de definir el método en cualquier lado. La idea de OOP es definir todo pensando en el comportamiento y la esencia (intensionalmente).
 
 ### Development of the Smalltalk-72 System and Applications
 
@@ -82,17 +87,23 @@ El primer proyecto fue implementar las ventanas (las primeras con la convención
 Después se crearon las clases básicas (strings, int, etc), una clase para dibujar (turtle) y un editor de código de smalltalk ideado para usarse con mouse. Luego implementaron un editor de paráfos y documentos multimedia, en ese momento se dieron cuenta que cada objeto tendría que poder manejar su propia edición.  
 Desarrollaron algunos avances de música simulada por computadora como procesar voces, conectar instrumentos, efectos, un sistema para la notación de música clara para niños y herremienatas de análisis musical.  
 Hicieron simpula, una versión más simple que SIMULA para hacer simulaciones de por ejemplo hospitales o parques de diversiones.  
-Acalaración: con programación icónica se refiere a programar usando entornos más visuelas mostrando como debe cambiar el sistema de forma más entendible.
+Acalaración: con programación icónica se refiere a programar usando entornos más visualas mostrando como debe cambiar el sistema de forma más entendible.
 
 ### The Evolution Of Smalltalk-72
 
-Smalltalk-74 incorporó varias mejoras. Diccionario de mensajes para las clases,un rediseño de los gráficos implementado por Ingalls y una mejor y más general interfaz de las ventanas.  
+Smalltalk-74 incorporó varias mejoras. Diccionario de mensajes para las clases, un rediseño de los gráficos implementado por Ingalls y una mejor y más general interfaz de las ventanas.  
 Se agregó OOZE (Object-Oriented Zoned Environment) un sistema de memoria virtual ya que la ALTO tenía poca memoria. Hacía que solo los objetos necesarios estén en memoria "purgando" los "sucios" y los que no se utilizaban. Si un objeto importante se purgaba por error se traía de vuelta. Tuvieron que enfrentar otros desafíos de manejo de memoria pero al final consiguieron que el sistema crashee menos, que haya una imagen "checkpoint" de no más de unos segundos de antigüedad y usar la memoria de manera más eficiente.
 
 ### "Object-oriented" Style
 
-Para que los desarrolladores no rompan el estado interno de los componentes, los objetos deben ser cosas con comportamiento de mayor nivel y algún objetivo para usar como componentes dinámicos, no como un tipo abstracto donde el manejo del estado es explícito.  
-La eficiencia de diseñar de forma orientada a objetos es que representa sistemas complejos de manera mucho más clara, además permite reducir la cantidad de código y al encapsular es menos frágil y mas extensible. Cuatro técnicas son: Los objetos deben mantener su propio estado, polimorfismo, instanciación y métodos como metas (se debe definir comportamiento).  
+Para que los desarrolladores no rompan el estado interno de los componentes, los objetos deben ser cosas con comportamiento de más alto nivel y tener algún objetivo para usar como componentes dinámicos, no como un tipo abstracto donde el manejo del estado es explícito.  
+Lo eficiente de diseñar de forma orientada a objetos es que representa sistemas complejos de manera mucho más clara, además permite reducir la cantidad de código y al encapsular es menos frágil y mas extensible. Cuatro técnicas para hacerlo son:
+
+- Los objetos deben mantener su propio estado
+- polimorfismo
+- instanciación
+- métodos como metas (se debe definir comportamiento).
+
 Básicamente la idea es eliminar algunas dificultades como el manejo éxplicito de datos para que los desarrolladores estén más preocupados en el diseño que en ciertas cuestiones técnicas.
 
 ### Smalltalk And Children
@@ -107,37 +118,37 @@ Explica dos pilares fundamentales para aprender:
 
 - Fluidez: construir las estructuras mentales para que las interpretaciones de las representaciones desaparezcan, como por ejemplo para un tenista la raqueta es una extensión de su cuerpo.
 
-- Metáforas: una metáfora que ayude a iluminar otras áreas, sin ser confusa.
+- Metáforas: una metáfora que ayude a iluminar otras áreas, pero evitando volver al problema aún más confuso.
 
 ## 1976-1980--THE FIRST MODERN SMALLTALK (-76), ITS BIRTH,APPLICATIONS, AND IMPROVEMENTS
 
 A fines del 75 el equipo sentía que estaba sin rumbo y que la idea del "Dynabook for children" no estaba funcionando.  
-Kay se puso a trabajar en una máquina nueva y el lenguaje NoteTaker, porque le parecía que smalltalk no cumplía con su visión para fomentar el pensamiento computacional en niños, mientras que Ingalls se volcó a diseñar smalltalk-76.
+Kay se puso a trabajar en una máquina portátil nueva, _NoteTaker_. Le parecía que smalltalk no cumplía con su visión para fomentar el pensamiento computacional en niños, mientras que Ingalls se volcó a diseñar smalltalk-76.
 Dan se deshizo del dualismo entre funciones y clases que había en smalltalk para conseguir una definición totalmente intensional (comportamiento y esencia). La mayoría del código ya estaba escrito de esa manera.  
 Mejoró el mecanismo de herencia haciendolo más flexible y solidificó la idea de que "todo es un objeto" incluidas las partes internas del sistema.
-Además mejoró la sintáxis ya que antes era demasiado flexible. Agregó keywords y operadores mejorando la claridad y manteniendo flexibilidad. Mejoró el rendimiento (x180) usando un compilador como los de las máquinas FLEX y adaptando el OOZE VM.
+Además mejoró la sintáxis ya que antes era demasiado flexible. Agregó keywords y operadores mejorando la claridad y manteniendo flexibilidad. Mejoró el rendimiento (x180) usando un compilador como los de las máquinas FLEX (usando una representación de bytecode) y adaptando el OOZE VM.
 
 ### Inheritance
 
-Se decidió omitir la implementación de herencia en smalltalk 72 ya que podía traer problemas de rigidez como paso con SIMULA. Para smalltalk-76 Dan presentó un esquma similar al de simula que podía ser modificado fácilmente acorde a las metas del equipo, a Dan no le terminaba de convencer.
+Se decidió omitir la implementación de herencia en smalltalk 72 ya que podía traer problemas de rigidez como paso con SIMULA. Para smalltalk-76 Dan presentó un esquma similar al de simula pero más flexible que podía ser modificado fácilmente acorde a las metas del equipo, lo que permite por ejemplo cosas como metaprogramación. a Dan igualmente no le terminaba de convencer.
 
-En esta época Xerox seguía construyendo cada vez más computadoras, pero Alan insistía con la dynabook. Entendía que en el próximo tiempo las computadoras iban a ser suficientemente poderosas para funcionar eneramente por software. Por eso le parecía fundamental invertir en software.  
+En esta época Xerox seguía construyendo cada vez más computadoras, pero Alan insistía con la dynabook. Entendía que en el próximo tiempo las computadoras iban a ser suficientemente poderosas para funcionar enteramente por software. Por eso le parecía fundamental invertir en software.  
 Años después, en 1992, el mercado de computadoras personales se duplico. La empresa más exitosa en ese entonces era Microsoft, una empresa de software.
 
 ### Smalltalk-76
 
-Dan y su equipo terminaron el diseño de smalltalk-76 y lo implementaron en 7 meses desde cero, lo que incluía reescribir la definición de cada clase. Alan lo encontró fascinante, era rápido, podía resolver problemas complejos y era divertido. Se componía de 50 clases incluyendo funciones del OS, archivos, servicio de ethernet, la interfaz de ventanas, editores, gráficos y dos novedades: un buscador de métodos estáticos en la jerarquía de herencia y contextos dinámicos para debugging en run-time. Aparece el return ^,pasar colaboradores con :, self y la implementación de super para delegar el mensaje a la siguiente superclase. Todo esto implico un gran avance.  
-Cuenta que en el 78 tenían que dar un seminario de software con enfásis en su complejidad y que se podía hacer con el para los directivos de Xerox. En lugar de enseñarles smalltalk-76 decidieron crear (en dos meses) un sistema en smalltalk para usuarios no-expertos. Tomaron la simulación de una tienda que hicieron en _SIMPULA_ como punto de partida para crear una herramienta de simulaciones que los directivos puedan usar para hacer simulaciones dinámicas con gráficos animados en la pantalla al cambiar de estado. Se llamó Smalltalk SimKit. Adele Goldberg fue la líder de diseño. En este proceso también implementaron la opción de personalizar la fuente y el tamaño del sistema. La presentación fue un éxtio rotundo, 9 de 10 directivos pudieron resolver el problema que quisieron en la simulación.  
+Dan y su equipo terminaron el diseño de smalltalk-76 y lo implementaron en 7 meses desde cero, lo que incluía reescribir la definición de cada clase. Alan lo encontró fascinante, era rápido, podía resolver problemas complejos y era divertido. Se componía de 50 clases incluyendo funciones del OS, archivos, servicio de ethernet, la interfaz de ventanas, editores, gráficos y dos novedades: un buscador de métodos estáticos en la jerarquía de herencia y contextos dinámicos para debugging en run-time. Aparece el return ^,pasar colaboradores con :, self y la implementación de super para delegar el mensaje a la siguiente superclase. Todo esto implicó un gran avance.  
+Cuenta que en el 78 tenían que dar un seminario de software para los directivos de Xerox con enfásis en su complejidad y que se podía hacer con el. En lugar de enseñarles smalltalk-76 decidieron crear (en dos meses) un sistema en smalltalk para usuarios no-expertos. Tomaron la simulación de una tienda que hicieron en _SIMPULA_ como punto de partida para crear una herramienta de simulaciones que los directivos puedan usar para hacer simulaciones dinámicas con gráficos animados en la pantalla al cambiar de estado. Se llamó Smalltalk SimKit. Adele Goldberg fue la líder de diseño. En este proceso también implementaron la opción de personalizar las fonts y su tamaño en el sistema. La presentación fue un éxtio rotundo, 9 de 10 directivos pudieron resolver el problema que quisieron en la simulación.  
 Más adelante Dan se interesó por la NoteTaker y quería ver si podía correr smalltalk.
 Para hacerlo correr llevó a cabo excelentes mejoras en el diseño del sistema y cambios en el manejo de memoria.  
 Si bien los 8086 de la NoteTaker no eran tan buenos como la ALTO, el interprete resultó ser el doble de rápido que la ALTO. Funcionaba tan bien que hicieron 10 máquinas.  
 Alan dice que le dió lastima que Xerox no les haya dado la oportunidad de hacer esto antes, y que lo hayan tenido que hacer con el CPU y display equivocados, cuando si en el año 70 les hubieran dado los recursos lo podrían haber hecho ellos.  
 Para el año 79 estaban haciendo muchas demos, en particular hicieron una para Steve Jobs y la gente de Apple. Estaban desarrollando el proyecto _Lisa_ que todavía no tenían claro como debía ser así que visitaron PARC. Ahí les mostraron la _Dorado_, una máquina muy rápida "hermana mayor" de la ALTO.  
-En una parte de la presentación Jobs dijo que no le gustaba la forma de scrollear y preguntó si se podía hacer de forma más continua a lo que en menos de un minuot Dan cambio los métodos e implementó un scroll continuo. Quienes veía quedaron shockeados, especialmente los programadores, que nunca vieron un sistema tan poderoso. Jobs trato de comprar la tecnología pero Xerox se negó y tampoco la siguió desarrollando con inversiones en la NoteTaker.
+En una parte de la presentación Jobs dijo que no le gustaba la forma de scrollear y preguntó si se podía hacer de forma más continua a lo que en menos de un minuot Dan cambio los métodos e implementó un scroll continuo. Quienes veían quedaron shockeados, especialmente los programadores, que nunca vieron un sistema tan poderoso. Jobs trato de comprar la tecnología pero Xerox se negó y tampoco la siguió desarrollando con inversiones en la NoteTaker.
 
 ## 1980-1983--THE RELEASE VERSION OF SMALLTALK (-80)
 
-Dan Ingals dijo : "La decisión de no continuar con el proyecto NoteTaker agrego motivación adicional para publicar SmallTalk". Alan estaba contento con la elegancia del Smalltalk de Dan y su equipo pero triste porque desde Smalltalk-76 ningún niño tuvo acceso a usarlo.  
+Dan Ingals dijo : "La decisión de no continuar con el proyecto NoteTaker agregó motivación adicional para publicar SmallTalk". Alan estaba contento con la elegancia del Smalltalk de Dan y su equipo pero triste porque desde el debut de Smalltalk-76 ningún niño tuvo acceso a usarlo.  
 Esto y que tecnologías viables en el sentido comercial como sus displays también sean abandonadas, le hizo pensar que Xerox nunca iba a entender su punto de vista. Luego decidió tomarse un "sabático".  
 Para que Smalltalk se pueda distribuir Adele escribió la documentación y se hicieron algunos cambios, como cambiar la fuente a ASCII para que sea generalmente más compatible y transformaron los Blocks en algo más parecido a las lambdas.  
 Lo que más sorprendió a Alan fue la implementación de las metaclases, que le pareció algo que aportó mas confusión que valor.
@@ -150,4 +161,4 @@ Aclaración: Late-binding (o vinculación tardía) es un concepto en programaci�
 
 En un sistema con late-binding, el código no se enlaza a una función o método específico hasta que el programa ejecuta la llamada. Este enfoque permite mayor flexibilidad, ya que permite que el comportamiento de los objetos pueda cambiar dinámicamente durante la ejecución del programa. Este concepto es esencial en la Programación Orientada a Objetos (OOP), donde el tipo de un objeto no siempre es conocido de antemano y puede depender del contexto en que se utiliza.
 
-Por ejemplo, en un lenguaje de programación como Smalltalk, un método puede ser determinado dinámicamente en función del tipo de objeto al que se le aplique, permitiendo una mayor flexibilidad y extensibilidad en el diseño del software.
+Por ejemplo, en un lenguaje de programación como Smalltalk, un método puede ser determinado dinámicamente en función del tipo de objeto al que se le aplique, permitiendo una mayor flexibilidad y extensibilidad en el diseño del software, no así en Simula que al compilarse cada objeto tiene ligado su método.
