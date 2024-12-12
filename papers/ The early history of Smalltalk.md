@@ -130,7 +130,7 @@ Además mejoró la sintáxis ya que antes era demasiado flexible. Agregó keywor
 
 ### Inheritance
 
-Se decidió omitir la implementación de herencia en smalltalk 72 ya que podía traer problemas de rigidez como paso con SIMULA. Para smalltalk-76 Dan presentó un esquma similar al de simula pero más flexible que podía ser modificado fácilmente acorde a las metas del equipo, lo que permite por ejemplo cosas como metaprogramación. a Dan igualmente no le terminaba de convencer.
+Se decidió omitir la implementación de herencia en smalltalk 72 ya que podía traer problemas de rigidez como paso con SIMULA. Para smalltalk-76 Dan presentó un esquma similar al de simula pero más flexible que podía ser modificado fácilmente acorde a las metas del equipo, lo que permite por ejemplo cosas como metaprogramación. a Alan igualmente no le terminaba de convencer.
 
 En esta época Xerox seguía construyendo cada vez más computadoras, pero Alan insistía con la dynabook. Entendía que en el próximo tiempo las computadoras iban a ser suficientemente poderosas para funcionar enteramente por software. Por eso le parecía fundamental invertir en software.  
 Años después, en 1992, el mercado de computadoras personales se duplico. La empresa más exitosa en ese entonces era Microsoft, una empresa de software.
